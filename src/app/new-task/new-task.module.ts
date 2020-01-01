@@ -1,20 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
-
-import { HomePage } from './home.page';
-import { HomeResolver } from './home.resolver';
+import { NewTaskPage } from './new-task.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
-    resolve: {
-      data: HomeResolver
-    }
+    component: NewTaskPage
   }
 ];
 
@@ -26,9 +20,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomePage],
-  providers: [
-    HomeResolver
-  ]
+  providers: [Location],
+  declarations: [NewTaskPage]
 })
-export class HomePageModule {}
+export class NewTaskPageModule {}
