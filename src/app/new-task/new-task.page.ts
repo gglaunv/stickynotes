@@ -32,7 +32,7 @@ export class NewTaskPage implements OnInit {
   }
 
   resetFields(){
-    this.image = "./assets/imgs/default_image.jpg";
+    this.image = 'https://freeiconshop.com/wp-content/uploads/edd/task-done-flat.png';//"./assets/imgs/default_image.jpg";
     this.validations_form = this.formBuilder.group({
       title: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required)
