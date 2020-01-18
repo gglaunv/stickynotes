@@ -1,6 +1,9 @@
 {
   "name": "StickyNotes",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular",
   "id": "3966a3b2"
 }

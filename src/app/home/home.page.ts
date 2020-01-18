@@ -9,7 +9,6 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
   items: Array<any>;
 
   constructor(
@@ -25,7 +24,7 @@ export class HomePage implements OnInit {
     }
   }
 
-  async getData(){
+  async getData() {
     const loading = await this.loadingCtrl.create({
       message: 'Please wait...'
     });
@@ -43,13 +42,13 @@ export class HomePage implements OnInit {
     return await loading.present();
   }
 
-  logout(){
+  logout() {
     this.authService.doLogout()
-    .then(res => {
-      this.router.navigate(["/login"]);
-    }, err => {
-      console.log(err);
-    })
+      .then(res => {
+        this.router.navigate(["/login"]);
+      }, err => {
+        console.log(err);
+      })
   }
 
 }

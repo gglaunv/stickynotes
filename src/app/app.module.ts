@@ -19,6 +19,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Toast } from '@ionic-native/toast/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,6 +39,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreen,
     ImagePicker,
     WebView,
+    Toast,
     { provide: FirestoreSettingsToken, useValue: {} },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
